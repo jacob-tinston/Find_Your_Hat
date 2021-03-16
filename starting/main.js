@@ -5,13 +5,12 @@ const hole = 'O';
 const fieldCharacter = '░';
 const pathCharacter = '*';
 
-//define class
 class Field {
   constructor(hatAndHoles, field) {
     this._field  = field;
     this._hatAndHoles = hatAndHoles;
   }
-  //play game method
+
   playGame() {
     let y = 0; 
     let x = 0;
@@ -57,14 +56,13 @@ class Field {
       }
     } 
   }
-  //print field method
+
   print() {
     for (let row of this._field){
       console.log(row.join(' '));
     }
   }
   
-  //generate field with hat and holes
   static generateField(height, width, holes) {
     let newField = [];
     for (let i = 0; i < height; i++) {
@@ -92,7 +90,6 @@ class Field {
     return newField;
   } 
   
-  //generate blank field for the user to traverse without seeing the hat and holes
   static generateBlankField(height, width){
     let newField = [];
     for (let i = 0; i < height; i++) {
@@ -109,15 +106,11 @@ class Field {
 
 let myField 
 
-//create the blank field for the user to see
 const blankField = Field.generateBlankField(5, 5)
 
-//created the field with the hat and holes
 const newField = Field.generateField(5, 5, 1);
 console.log(blankField);
 
-//instantiate a Field object using newField = hatAndHoles and field = blankField  
 myField = new Field (newField, blankField);
 
-//call playGame method
 myField.playGame();
