@@ -18,7 +18,7 @@ the field and 'Find Your Hat'.
 * node.js
 
 ## Status
-Project is: _in-progress_
+Project is: _finished_
 
 ## Contact
 Created by: Jacob  <br/>
